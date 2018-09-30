@@ -2,10 +2,12 @@
 
 one:
   code: MyString
-  first_name: MyString
-  last_name: MyString
+  title: MyString
+  date: 2018-09-29 19:52:28
+  type: 1
 
 two:
   code: MyString
-  first_name: MyString
-  last_name: MyString
+  title: MyString
+  date: 2018-09-29 19:52:28
+  type: 1

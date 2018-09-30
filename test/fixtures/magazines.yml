@@ -2,10 +2,8 @@
 
 one:
   code: MyString
-  first_name: MyString
-  last_name: MyString
+  issn: MyString
 
 two:
   code: MyString
-  first_name: MyString
-  last_name: MyString
+  issn: MyString
