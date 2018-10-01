@@ -603,12 +603,12 @@ end
 
     ```ruby
     
-      class CreateUserPublications < ActiveRecord::Migration[5.0]
+      class CreateAuthorPublications < ActiveRecord::Migration[5.0]
         def change
-          create_table :user do |t|
+          create_table :author do |t|
             t.string :fist_name
             t.string :last_name
-            t.string :dni
+            t.string :code
             t.timestamps
           end
       
@@ -620,13 +620,11 @@ end
             t.timestamps
           end
       
-          create_table :user_publications, id: false do |t|
-            t.belongs_to :user, index: true
+          create_table :author_publications, id: false do |t|
+            t.belongs_to :author, index: true
             t.belongs_to :publication, index: true
           end
         end
       end
     ```
   *Basado en [Active record associations, Ruby guides](https://edgeguides.rubyonrails.org/association_basics.html)*
-
-
