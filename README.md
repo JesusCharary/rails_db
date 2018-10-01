@@ -379,8 +379,7 @@ end
         create_table :publications do |t|
           t.string :code
           t.string :title
-          t.datetime :date
-          t.integer :theme_type
+          t.datetime :date          
           t.belongs_to :theme, index: true
 
           t.timestamps
