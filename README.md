@@ -56,10 +56,9 @@ $ rails g mdoel user first_name:string last_name:string
 ```
 **14.** Hacemos la migracíón para ver el mapping generado en nuestra base de datos.
 ```
-rake db:migrate
+$ rails db:migrate
 ```
 **15.** Y listo, ya podemos empezar a trabajar con el ORM de rails.
-## **Active Record Básico**
 ## **Migraciones**
 
 Las migraciones son una manera conveniente, fácil y consistente de modificar el esquema de una base de datos. Estas usan un [DSL](https://www.martinfowler.com/bliki/DomainSpecificLanguage.html) (Lenguaje de dominio especifico, por sus siglas en ingles) de Ruby, de tal manera que no se tenga que utilizar SQL especifico, permitiendo así que los cambios sean independientes del motor de bases de datos.
@@ -381,7 +380,7 @@ end
           t.string :code
           t.string :title
           t.datetime :date
-          t.type :integer
+          t.integer :theme_type
           t.belongs_to :theme, index: true
 
           t.timestamps
@@ -389,7 +388,7 @@ end
     
         create_table :themes do |t|
           t.name :string
-          t.type :integer
+          t.integer :theme_type
           t.timestamps
         end
       end
@@ -421,7 +420,7 @@ end
             t.belongs_to :user, index: {unique:true}, foreign_key: true
             t.string :code
             t.datetime :expiration_date
-            t.integer :type
+            t.integer :subs_type
             t.integer :user_id
             t.timestamps
           end
@@ -447,7 +446,7 @@ end
       def change
         create_table :themes do |t|
           t.string :name
-          t.type :integer
+          t.integer :theme_type
         end
 
         create_table :publications do |t|
@@ -455,7 +454,7 @@ end
           t.string :code
           t.string :title
           t.date   :date
-          t.type   :type
+          t.string :type
         end
       end
     end
@@ -572,7 +571,7 @@ end
               t.belongs_to :user, index: true
               t.string :code
               t.datetime :expiration_date
-              t.type :integer                            
+              t.inger :subs_type                            
               t.timestamps
             end
         
@@ -628,9 +627,6 @@ end
         end
       end
     ```
-    
-
-
-7. 
+  *Basado en [Active record associations, Ruby guides](https://edgeguides.rubyonrails.org/association_basics.html)*
 
 
