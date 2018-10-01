@@ -13,7 +13,7 @@
 **5.** En el gestor de db, crear usuario postgres mediante el cual rails se va a conectar a la base de datos.
 
 ```sql
-CREATE ROLE rails_user WITH CREATEDB login password "****"
+CREATE ROLE rails_user WITH createdb login password '****'
 ```
 **rails_user:** reemplazar por el nombre de usuario deseado
 
